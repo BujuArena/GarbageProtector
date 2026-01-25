@@ -1,8 +1,0 @@
-## Interface: 100002, 110107, 110200, 110205, 120000, 120001
-## Title: GarbageProtector
-## Notes: Intercepts irresponsible collectgarbage calls to prevent chunky lockups and freezes
-## Author: Alex Folland
-
-GarbageProtector.lua
-## SavedVariables: GarbageProtectorDB
-## SavedVariablesPerCharacter: GarbageProtectorDB
