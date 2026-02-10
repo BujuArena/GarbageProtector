@@ -18,6 +18,10 @@ jobs:
 
     # we can run our steps on pretty much anything, but the "ubuntu-latest" image is a safe bet
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      repository-projects: write
 
     # specify the environment variables used by the packager, matching the secrets from the project on GitHub
     env:
@@ -36,6 +40,7 @@ jobs:
         with:
           # you can specify how much of the commit history you want to fetch,
           # which is useful for controlling the length of the automated changelog
+          # fetch-depth of 0 gets only the commit history since the last release
           fetch-depth: 0
 
       # once cloned, we just run the GitHub Action for the packager project
